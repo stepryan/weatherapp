@@ -79,5 +79,11 @@ class LocationsController < ApplicationController
       format.html { redirect_to locations_url }
       format.json { head :no_content }
     end
+	def geocoding
+	@location = Gmaps4rails.geocode(params[:address])
+	if @location
+   @location_hash = @location.map { |location| {:longitude => location[:longitude], :latitude => location[:latitude], :address => location[:matched_address]} }.first 
+	end
+	end
   end
 end
