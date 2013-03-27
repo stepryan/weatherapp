@@ -4,8 +4,8 @@ Weatherapp::Application.routes.draw do
 
   devise_for :users
 
-  get "home/index"
-	root:to=>'home#index'
+  get "locations/index"
+	root:to=>'locations#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

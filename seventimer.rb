@@ -1,8 +1,8 @@
 Class seventimer
     def initialize(url, long , lat, pastro, pcivil, pcivill, pmeteo, ptwo , ampersand, outputxml, outputjson)
       @url ="http://www.7timer.com/v4/bin/astro.php?"
-      @long=""
-      @lat= ""
+      @long= "long=" + long
+      @lat= "&lat="  + lat
       @pastro ="astro"
       @pcivil = "civil"
       @pcivill = "civill"
@@ -19,8 +19,11 @@ Class seventimer
       return @pastro
     end
     def productcivil
-      @pcivil
+       return @pcivil
     end
     def pcivillight
       return @pcivill
     end
+	def returnastro
+	return @url + @long + @lat + "&product=" + @pastro + @outputxml
+	end
