@@ -28,4 +28,4 @@
 <br />
 <%= yield :head %>
 <%= link_to 'New Location', new_location_path %>
-<%= gmaps4rails(@json) %>
+<%= gmaps(:map_options => {:detect_location => true, :center_on_user => true, :auto_zoom => false, :zoom => 17, :auto_adjust => true}, :markers => {:data => @json}) %>
