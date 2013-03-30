@@ -19,6 +19,14 @@ group :production do
  gem 'pg'
 end
 
+platforms :ruby do # linux
+  gem 'unicorn'
+end
+
+platforms :mswin do
+  gem 'webrick'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
