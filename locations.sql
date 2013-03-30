@@ -1,0 +1,1 @@
+CREATE TABLE "locations" ("id" INTEGER PRIMARY KEY  NOT NULL ,"name" varchar(255),"address" varchar(255),"longitude" float,"latitude" float,"created_at" datetime NOT NULL ,"updated_at" datetime NOT NULL ,"gmaps" BOOL, "userid" int, FOREIGN KEY (userid) REFERENCES user (id))
