@@ -4,7 +4,8 @@ gem 'rails', '3.2.12'
 
 gem 'gmaps4rails', '1.5.6'
 gem 'devise', '2.1.2'
-gem 'geocoder'
+gem 'rails-xmlrpc'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

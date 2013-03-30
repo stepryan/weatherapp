@@ -2,10 +2,10 @@ Weatherapp::Application.routes.draw do
   resources :locations
 
 
-  devise_for :users
+  devise_for :users, :path_names =>{ :sign_up => "register"}
 
-  get "home/index"
-	root:to=>'home#index'
+  get "Locations/index"
+	root:to=>'Locations#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

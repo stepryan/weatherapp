@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-	
+<script type="text/javascript" charset="utf-8">
+     Gmaps.map.callback = function() {
+      var markers = Gmaps.map.markers
+      Gmaps.map.markers[0].setVisible(true)
+      }
+      </script>	
 <head>
   <title>Weatherapp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -14,7 +19,7 @@
 <%= yield %>
 <%= yield :scripts %>
 <%if user_signed_in?%>
-<div> Signed in as...<%=currrent_user.email%>(<%=link_to'Sign_out',destroy_user_session_path,:method=>:delete%></div>
+<div> Signed in as...<%=current_user.email%>(<%=link_to'Sign_out',destroy_user_session_path,:method=>:delete%></div>
 <%else%>
 <%=link_to'Register',new_user_registration_path%>or<%=link_to'Sign in',new_user_session_path%>
 <%end%>

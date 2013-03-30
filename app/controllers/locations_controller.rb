@@ -80,8 +80,9 @@ class LocationsController < ApplicationController
       format.json { head :no_content }
     end
     def index
-    @locations = Location.all
-    @json = Location.all.to_gmaps4rails
+    respond_to do |format|
+    format.html
+   end
   end
-  end
+end
 end

@@ -1,8 +1,9 @@
 class Location < ActiveRecord::Base
   attr_accessible :address, :latitude, :longitude, :name
+  belongs_to :user
   acts_as_gmappable 
       def gmaps4rails_address
-          address
+         address
       end
        def gmaps4rails_infowindow
 	   
