@@ -1,6 +1,12 @@
 
 <h1>Google Map: Current Location</h1>
+<br />
+<br />
+<br />
 <%= yield :head %>
+<h2>Current Stored Locations:</h2>
+<br />
+<br />
 <table>
   <tr>
     <th>Name</th>
@@ -11,7 +17,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @locations.each do |location| %>
   <tr>
     <td><%= location.name %></td>
@@ -24,7 +29,7 @@
   </tr>
 <% end %>
 </table>
-<%= link_to 'New Location', new_location_path %>
+<%= link_to 'Save Location', new_location_path %>
 <br />
 <%= yield :head %>
 <%= gmaps(:map_options => {:detect_location => true, :center_on_user => true, :auto_zoom => false, :zoom => 17, :auto_adjust => true}, :markers => {:data => @json}) %>

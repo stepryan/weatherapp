@@ -6,7 +6,7 @@ gem 'gmaps4rails', '1.5.6'
 gem 'devise', '2.1.2'
 gem 'rails-xmlrpc'
 gem 'thin'
-
+gem 'activerecord-postgresql-adapter'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
