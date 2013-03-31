@@ -7,6 +7,9 @@ gem 'devise', '2.1.2'
 gem 'rails-xmlrpc'
 gem 'thin'
 gem 'activerecord-postgresql-adapter'
+gem "RocketAMF", :git => "git://github.com/rubyamf/rocketamf.git"
+gem 'rubyamf', :git => 'git://github.com/rubyamf/rubyamf.git'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

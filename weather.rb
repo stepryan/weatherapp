@@ -17,8 +17,8 @@ Class Yahoo
 Class seventimer
     def initialize(url, long , lat, pastro, pcivil, pcivill, pmeteo, ptwo , ampersand, outputxml, outputjson)
       @url ="http://www.7timer.com/v4/bin/astro.php?"
-      @long= "long=" + long
-      @lat= "&lat="  + lat
+      @long= "long=" + @location.longitude
+      @lat= "&lat="  + @location.latitude
       @pastro ="astro"
       @pcivil = "civil"
       @pcivill = "civill"
