@@ -16,7 +16,7 @@
 			
 		private function init():void{
 			try{
-				var token:AsyncToken = AsyncToken(astroweather.show());
+				var token:AsyncToken = AsyncToken(astroweather.AstroResult());
 				token.kind = "fill";
 			} catch(e:IOError){
 				Alert.show('data has not loaded. Pull failed, pleas try again.');

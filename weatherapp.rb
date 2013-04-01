@@ -5,7 +5,7 @@ require "xmlrpc/client"
 @url = "http://www.7timer.com/v4/bin/astro.php?"
 server = XMLRPC::Client.new( @url + @parameters)
 
-def AstroResult
+def Result
     @astroresult = server.call()
     return astroresult
 end
