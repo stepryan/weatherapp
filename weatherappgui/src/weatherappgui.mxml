@@ -15,22 +15,31 @@
 			private var weatherAstro:Array = new Array();
 			
 		private function init():void{
-		 var token:AsyncToken = AsyncToken(astroweather.show());
-		 token.kind = "fill";
+			try{
+				var token:AsyncToken = AsyncToken(astroweather.show());
+				token.kind = "fill";
+			} catch(e:IOError){
+				Alert.show('data has not loaded. Pull failed, pleas try again.');
+			}
+		 
 		}
 			
 		private function onResult(event:ResultEvent):void{
-			if ( event.token.kind == "fill"){
-				weatherAstro = event.result as Array;
-			}else{
-				init();
+			try{
+				if ( event.token.kind == "fill"){
+					weatherAstro = event.result as Array;
+				}else{
+					init();
+				}
+			}catch(e:IOError){
+				Alert.show('data has not loaded. Pull failed, pleas try again.');
 			}
 		}
 		]]>
 	</fx:Script>
 	<fx:Declarations>
 		<mx:RemoteObject id="astroweather" destination="rubyamf" endpoint="http://aimsir.herokuapp.com/amf" showBusyCursor="true"  
-		 	result="onResult(event)"  source="WeatherController"/>
+		 	result="onResult(event)"  source="WeathersController"/>
 		
 	</fx:Declarations>
 	<s:Panel x="0" y="108" width="800" height="400">
