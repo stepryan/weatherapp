@@ -11,6 +11,7 @@
 			import mx.rpc.events.FaultEvent;
 			import mx.rpc.events.ResultEvent;
 			
+			[Bindable]
 			private var weatherAstro:Array = new Array();
 			
 		private function init():void{
