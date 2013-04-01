@@ -4,7 +4,6 @@
 			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" creationComplete="init()">
 	<fx:Script>
 		<![CDATA[
-			import Classes.Globals;
 			import Classes.AstroResult;
 			import mx.controls.Alert;
 			import mx.rpc.AsyncToken;
