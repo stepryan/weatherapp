@@ -18,7 +18,6 @@ class LocationsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @location }
-      format.amf { render amf: @location }
     end
   end
 
@@ -30,7 +29,6 @@ class LocationsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @location }
-      format.amf { render amf: @location }
     end
   end
 
