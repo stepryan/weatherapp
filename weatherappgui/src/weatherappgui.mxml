@@ -5,42 +5,38 @@
 	<fx:Script>
 		<![CDATA[
 			import Classes.Globals;
+			import Classes.AstroResult;
 			import mx.controls.Alert;
-			import mx.rpc.events.ResultEvent;
+			import mx.rpc.AsyncToken;
 			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
 			
-			import spark.components.mediaClasses.VolumeBar;
+			private var weatherAstro:Array = new Array();
 			
 		private function init():void{
-		 astroweather.astroweather();
+		 var token:AsyncToken = AsyncToken(astroweather.find_all());
+		 token.kind = "fill";
 		}
 			
 		private function onResult(event:ResultEvent):void{
-			aweather.dataProvider = event.result;
+			if ( event.token.kind == "fill"){
+				weatherAstro = event.result as Array;
+			}else{
+				
+			}
 		}
 		]]>
 	</fx:Script>
 	<fx:Declarations>
-		<mx:RemoteObject id="astroweather" destination="rubyamf" endpoint="http://aimsir.herokuapp.com/amf" >
-		<mx:method name="astroweather" 	result="onResult(event)" />
+		<mx:RemoteObject id="astroweather" destination="rubyamf" endpoint="http://aimsir.herokuapp.com/amf" showBusyCursor="true"  >
+		<mx:method name="AstroResult" 	result="onResult(event)" />
 		</mx:RemoteObject>
 	</fx:Declarations>
 	<s:Panel x="0" y="108" width="800" height="400">
 	</s:Panel>
-	<s:DataGrid id="aweather" x="825" y="108" requestedRowCount="4">
-		<s:columns>
-			<s:ArrayList>
-				<s:GridColumn dataField="dataField1" headerText="Column 1"></s:GridColumn>
-			</s:ArrayList>
-		</s:columns>
-		<s:typicalItem>
-			<fx:Object dataField1="Sample Data" dataField2="Sample Data" dataField3="Sample Data"></fx:Object>
-		</s:typicalItem>
-		<s:ArrayList>
-			<fx:Object dataField1="data1" dataField2="data1" dataField3="data1"></fx:Object>
-			<fx:Object dataField1="data2" dataField2="data2" dataField3="data2"></fx:Object>
-			<fx:Object dataField1="data3" dataField2="data3" dataField3="data3"></fx:Object>
-			<fx:Object dataField1="data4" dataField2="data4" dataField3="data4"></fx:Object>
-		</s:ArrayList>
-	</s:DataGrid>
+	<mx:DataGrid id="aweather" dataProvider="{weatherAstro}"  rowCount="6"  x="824" y="108">
+		<mx:columns>  
+			<mx:DataGridColumn dataField="weather" headerText="Weather"/>
+		</mx:columns>  
+	</mx:DataGrid>
 </s:Application>
