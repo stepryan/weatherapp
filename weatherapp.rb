@@ -1,9 +1,11 @@
 module CheckWeather
 require "xmlrpc/client" 
-server = XMLRPC::Client.new("http://aimsir.herokuapp.com/")
+@parameters = weather.seventimer.returnastro
+@url = "http://www.7timer.com/v4/bin/astro.php?"
+server = XMLRPC::Client.new( @url + @ parameters)
 
 def AstroResult
-    @astroresult = server.call("weather.seventimer.returnastro")
+    @astroresult = server.call()
     return astroresult
 end
 

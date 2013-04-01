@@ -41,5 +41,5 @@ Class seventimer
       return @pcivill
     end
 	def returnastro
-	return @url + @long + @lat + "&product=" + @pastro + @outputxml
+	return @long + @lat + "&product=" + @pastro + @outputxml
 	end

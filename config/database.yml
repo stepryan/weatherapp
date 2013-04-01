@@ -25,4 +25,5 @@ production:
   pool:5
   timeout:5000
   port:5342
-  host:ec2-54-225-69-193.compute-1.amazonaws.com	
+  host:ec2-54-225-69-193.compute-1.amazonaws.com
+  password:CF2LZbIL12s8JdzflvJwYbMDzu  
