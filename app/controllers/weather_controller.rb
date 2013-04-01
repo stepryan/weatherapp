@@ -1,6 +1,6 @@
 class WeatherController < ApplicationController
 def show
-    @astroweather = watherapp.AstroResult()
+    @astroweather = weatherapp.AstroResult()
 
     respond_to do |format|
       format.html # show.html.erb
