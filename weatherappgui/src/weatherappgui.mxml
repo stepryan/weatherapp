@@ -43,6 +43,7 @@
 		
 	</fx:Declarations>
 	<s:Panel x="0" y="108" width="800" height="400">
+		
 	</s:Panel>
 	<mx:DataGrid id="aweather" dataProvider="{weatherAstro}"  rowCount="6"  x="824" y="108">
 		<mx:columns>  
