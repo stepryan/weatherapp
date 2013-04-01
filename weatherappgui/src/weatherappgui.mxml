@@ -22,15 +22,15 @@
 			if ( event.token.kind == "fill"){
 				weatherAstro = event.result as Array;
 			}else{
-				
+				init();
 			}
 		}
 		]]>
 	</fx:Script>
 	<fx:Declarations>
-		<mx:RemoteObject id="astroweather" destination="rubyamf" endpoint="http://aimsir.herokuapp.com/amf" showBusyCursor="true"  >
-		<mx:method name="AstroResult" 	result="onResult(event)" />
-		</mx:RemoteObject>
+		<mx:RemoteObject id="astroweather" destination="rubyamf" endpoint="http://aimsir.herokuapp.com/amf" showBusyCursor="true"  
+		 	result="onResult(event)"  source="WeatherController"/>
+		
 	</fx:Declarations>
 	<s:Panel x="0" y="108" width="800" height="400">
 	</s:Panel>

@@ -7,7 +7,7 @@ module RubyAMF
 
     
     ClassMappings.assume_types = false
-
+	ParameterMappings.scaffolding = true
     
     ClassMappings.register(:actionscript => 'AstroResult',
                             :ruby => 'AstroResult',
@@ -15,7 +15,11 @@ module RubyAMF
                             :attributes => ["astroresult"])
  
     
-    ParameterMappings.scaffolding = true
-
+    
+	ClassMappings.force_active_record_ids = true  
+    ClassMappings.use_ruby_date_time = false  
+    ClassMappings.use_array_collection = false  
+    ClassMappings.check_for_associations = false  
+    ParameterMappings.always_add_to_params = true  
     end
 end
