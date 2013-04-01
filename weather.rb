@@ -14,7 +14,7 @@ Class Yahoo
        def farhenheit
          return @farhenheit
        end
-Class seventimer
+Class Seventimer
     def initialize(url, long , lat, pastro, pcivil, pcivill, pmeteo, ptwo , ampersand, outputxml, outputjson)
       @url ="http://www.7timer.com/v4/bin/astro.php?"
       @long= "long=" + @location.longitude
