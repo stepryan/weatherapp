@@ -14,7 +14,7 @@
 			private var weatherAstro:Array = new Array();
 			
 		private function init():void{
-		 var token:AsyncToken = AsyncToken(astroweather.find_all());
+		 var token:AsyncToken = AsyncToken(astroweather.show());
 		 token.kind = "fill";
 		}
 			
