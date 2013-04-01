@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "1.9.3"
 gem 'rails', '3.2.12'
 gem 'gmaps4rails', '1.5.6'
 gem 'devise', '2.1.2'
@@ -13,7 +13,7 @@ gem 'weatherapp' ,  :git => 'git://github.com/stepryan/weatherapp.git'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-ruby "1.9.3"
+
 
 group :development do
  gem 'sqlite3'

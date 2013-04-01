@@ -1,5 +1,4 @@
 class WeathersController < ApplicationController
-  require "weatherapp"
 def show
     @astroweather = weatherapp.AstroResult()
 
