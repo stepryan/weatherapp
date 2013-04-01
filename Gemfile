@@ -9,8 +9,8 @@ gem 'thin'
 gem 'activerecord-postgresql-adapter'
 gem "RocketAMF", :git => "git://github.com/rubyamf/rocketamf.git"
 gem 'rubyamf', :git => 'git://github.com/rubyamf/rubyamf.git'
-gem 'weather', '0.1.0', :git => " git://github.com/stepryan/weatherapp.git"
-gem 'weatherapp', '0.1.0', :git => " git://github.com/stepryan/weatherapp.git"
+gem 'weather',  :git => 'git://github.com/stepryan/weatherapp.git'
+gem 'weatherapp',  :git => 'git://github.com/stepryan/weatherapp.git'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

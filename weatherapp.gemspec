@@ -7,5 +7,5 @@ Gem::Specification.new do |s|
 	s.authors = ["Stephen Ryan"]
 	s.email = 'stephen.ryan2@student.ncirl.ie'
 	s.homepage ='http://rubygems.org/gems/weatherapp'
-	s.files =["lib/weatherapp.rb"]
+	s.files =["weatherapp.rb"]
 end

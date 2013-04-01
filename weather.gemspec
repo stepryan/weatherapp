@@ -6,6 +6,6 @@ Gem::Specification.new do |s|
 	s.description="extract weather data in xml format"
 	s.authors = ["Stephen Ryan"]
 	s.email = 'stephen.ryan2@student.ncirl.ie'
-	s.homepage ='http://rubygems.org/gems/weather'
-	s.files =["lib/weather.rb"]
+	s.homepage =''
+	s.files =["weather.rb"]
 end
