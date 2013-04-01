@@ -39,8 +39,9 @@
 	</fx:Script>
 	<fx:Declarations>
 		<mx:RemoteObject id="astroweather" destination="rubyamf" endpoint="http://aimsir.herokuapp.com/amf" showBusyCursor="true"  
-		 	result="onResult(event)"  source="WeathersController"/>
-		
+		 	  source="WeathersController">
+			<mx:method name="result" result="onResult(event)"/>
+		</mx:RemoteObject>
 	</fx:Declarations>
 	<s:Panel x="0" y="108" width="800" height="400">
 		
