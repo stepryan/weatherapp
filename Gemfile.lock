@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/rubyamf/rocketamf.git
+  revision: 3f16cf841d9c36045f720b307bbffa61fb63a7ac
+  specs:
+    RocketAMF (1.0.0)
+
+GIT
   remote: git://github.com/rubyamf/rubyamf.git
   revision: 03dbc3d60bdd6639387c532514a29a45a7eeece8
   specs:
@@ -62,7 +68,6 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -141,6 +146,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  RocketAMF!
   activerecord-postgresql-adapter
   coffee-rails (~> 3.2.1)
   devise (= 2.1.2)
